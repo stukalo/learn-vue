@@ -11,20 +11,32 @@ module.exports = {
           speed: 4
         }
         ret.mozjpeg = {
-          progressive: true,
+          progressive: true
         }
         ret.optipng = {
-          enabled: false,
+          enabled: false
         }
         ret.pngquant = {
           quality: [0.65, 0.90],
           speed: 4
         }
         ret.gifsicle = {
-          interlaced: false,
+          interlaced: false
         }
         ret.webp = {
           quality: 75
+        }
+        ret.svgo = {
+          plugins: [
+            {
+              name: 'removeViewBox',
+              active: false
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false
+            }
+          ]
         }
         return ret
       })
